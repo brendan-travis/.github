@@ -1,4 +1,6 @@
 terraform {
+  backend "local" {}
+
   required_providers {
     github = {
       source  = "integrations/github"
@@ -10,8 +12,8 @@ terraform {
 provider "github" {}
 
 resource "github_repository" "dot-github" {
-  name               = ".github"
-  description        = "A repository for managing the state of my GitHub estate."
+  name               = var.repo-dot-github.name
+  description        = var.repo-dot-github.description
   allow_merge_commit = false
   allow_rebase_merge = false
   allow_squash_merge = true
