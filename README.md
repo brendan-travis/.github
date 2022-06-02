@@ -1,6 +1,6 @@
-# .github
+# Github
 
-Dot GitHub is a repository for managing the state of my
+GitHub is a repository for managing the state of my
 GitHub estate. It uses Terraform to define the GitHub
 resources and track their state through local state files.
 
@@ -13,17 +13,19 @@ manage the GitHub account. This is done by setting the
 export GITHUB_TOKEN="..."
 ```
 
-## Import state
-Since the state is managed via local state, you will
-first need to run the `./import.sh` utility script
-to import all the necessary resources. 
-
 ## Running the Terraform scripts
 
 ```
 terraform init
 ```
 Start by initialising the Terraform environment.
+
+```
+sh ./import.sh
+```
+Since the state is managed via local state, you will
+first need to run the `./import.sh` utility script
+to import all the necessary resources.
 
 ```
 terraform apply

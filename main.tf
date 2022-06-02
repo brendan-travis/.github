@@ -11,7 +11,7 @@ terraform {
 
 provider "github" {}
 
-resource "github_repository" "dot-github" {
+resource "github_repository" "github" {
   name               = var.repo-dot-github.name
   description        = var.repo-dot-github.description
   allow_merge_commit = false

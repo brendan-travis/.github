@@ -1,1 +1,1 @@
-terraform import github_repository.dot-github .github
+terraform import github_repository.github github
